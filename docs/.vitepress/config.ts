@@ -1,9 +1,8 @@
 import { defineConfig } from 'vitepress'
 
-
 export default defineConfig({
     themeConfig: {
-        siteTitle: 'Gravity的博客',  // 网站标题
+        siteTitle: 'GravityDocs',  // 网站标题
         logo: '/my-logo.png',  // 网站logo
         // 顶部栏导航栏
         nav: [
@@ -75,7 +74,41 @@ export default defineConfig({
         },
         // 本地搜索
         search: {
-            provider: 'local'
-        }
+            provider: 'local',
+            options: {
+                locales: {
+                    root: { //这里是个大坑，zh是不生效的，改为root即可
+                        translations: {
+                            button: {
+                                buttonText: '搜索文档',
+                                buttonAriaLabel: '搜索文档'
+                            },
+                            modal: {
+                                noResultsText: '无法找到相关结果',
+                                resetButtonTitle: '清除查询条件',
+                                footer: {
+                                    selectText: '选择',
+                                    navigateText: '切换'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        // 页脚配置
+        footer: {
+            message: '用心去做高质量的专业前端内容网站，欢迎 <a style="color: #0066ff" href="https://github.com/panqingjie00/my-blog">star ⭐</a> 让更多人发现',
+            copyright: 'MIT License | 版权所有 © 0000-9999 Chocolate and ChoDocs contributors'
+        },
+        // github 编辑链接
+        editLink: {
+            pattern: 'https://github.com/panqingjie00/my-blog/blob/main/docs/.vitepress/config.ts',
+            text: '在 GitHub 上编辑此页'
+        },
+        // 最后更新时间的显示文本
+        lastUpdatedText: '最后一次更新于'
     },
+    // 开启/关闭 最后更新时间
+    lastUpdated: true,
 })
