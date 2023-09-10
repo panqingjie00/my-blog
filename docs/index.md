@@ -5,12 +5,18 @@ hero:
     name: GravityDocs
     text: Front-end learning document collection
     tagline: 一站式前端内容网站，包括学习路线、知识体系
+    image:
+      src: /animal.svg 
+      alt: 图片
     actions:
         - theme: brand
-          text: Get Started
+          text: 开始阅读
           link: /test
         - theme: alt
-          text: View on GitHub
+          text: 学习圈子
+          link: https://github.com/panqingjie00
+        - theme: alt
+          text: 面试大全
           link: https://github.com/panqingjie00
 
 features:
@@ -69,10 +75,3 @@ features:
       linkText: 欢迎star⭐️
       rel: external
 ---
-
-<style>
-    :root {
-        --vp-home-hero-name-color: transparent;
-        --vp-home-hero-name-background: -webkit-linear-gradient(-225deg,#9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
-    }
-</style>
