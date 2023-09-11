@@ -5,7 +5,10 @@ export default defineConfig({
     titleTemplate: '一站式前端内容网站，包括学习路线、知识体系',
     // 页签图标
     head: [['link', { rel: 'icon', href: '../public/favicon.ico' }]],
+    // 网站描述
     description: '一个基于VitePress构建的个人博客网站',
+    // 开启/关闭 最后更新时间
+    lastUpdated: true,
     themeConfig: {
         siteTitle: 'GravityDocs',  // 网站标题
         logo: '/my-logo.png',  // 网站logo
@@ -31,7 +34,7 @@ export default defineConfig({
             {
                 text: '编程',
                 items: [
-                    { text: '⭐ 资源导航', link: '/favorites' },
+                    { text: '⭐ 资源导航', link: '/favorites/front-end/' },
                     { text: '💻 编程学习', link: '/program/' },
                     { text: '🔧 编程工具', link: '/tool/' },
                 ],
@@ -98,7 +101,7 @@ export default defineConfig({
                     ]
                 }
             ],
-
+            // 专栏 - 面试大全
             '/interview/': [
                 {
                     text: '介绍',
@@ -181,7 +184,7 @@ export default defineConfig({
                     ]
                 },
             ],
-
+            // 专栏 - 前端算法
             '/algorithm/': [
                 { text: '导读', link: '/algorithm/guide/' },
                 { text: '数据结构', link: '/algorithm/guide/dataStructure' },
@@ -321,7 +324,7 @@ export default defineConfig({
                     ]
                 }
             ],
-
+            // 专栏 - 设计模式
             '/patterns/': [
                 {
                     text: '设计模式',
@@ -337,6 +340,28 @@ export default defineConfig({
                         { text: '混合模式', link: '/patterns/mixin-pattern/' },
                         { text: '中介/中间件模式', link: '/patterns/middleware-pattern/' },
                         { text: '高阶组件模式', link: '/patterns/hoc-pattern/' }
+                    ]
+                }
+            ],
+            // 编程 - 资源导航
+            '/favorites/': [
+                {
+                    text: '前端资源',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        {
+                            items: [
+                                { text: '导读', link: '/favorites/front-end/' },
+                                { text: 'Hooks', link: '/favorites/front-end/hooks' },
+                                { text: '前端框架', link: '/favorites/front-end/framework' },
+                                { text: 'UI 组件库', link: '/favorites/front-end/ui' },
+                                { text: '表单设计器', link: '/favorites/front-end/form-design' },
+                                { text: '微前端', link: '/favorites/front-end/micro-front-end' },
+                                { text: 'Web3D', link: '/favorites/front-end/web3d' },
+                                { text: 'WebGIS', link: '/favorites/front-end/webgis' },
+                                { text: '前端插件', link: '/favorites/front-end/plugin' },
+                            ]
+                        },
                     ]
                 }
             ],
@@ -389,21 +414,7 @@ export default defineConfig({
         // 最后更新时间的显示文本
         lastUpdatedText: '最后一次更新于'
     },
-    // 开启/关闭 最后更新时间
-    lastUpdated: true,
-
-    // markdown: {
-    //     theme: 'material-theme-palenight',
-    //     lineNumbers: true,
-
-    //     // adjust how header anchors are generated,
-    //     // useful for integrating with tools that use different conventions
-    //     anchor: {
-    //         slugify(str) {
-    //             return encodeURIComponent(str)
-    //         }
-    //     }
-    // }
+    // markdown 文件 主题风格配置
     markdown: {
         // TODO
         theme: {
