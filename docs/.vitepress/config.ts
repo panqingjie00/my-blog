@@ -9,6 +9,14 @@ export default defineConfig({
     themeConfig: {
         siteTitle: 'GravityDocs',  // 网站标题
         logo: '/my-logo.png',  // 网站logo
+        // 在大纲中显示的标题级别  number | [number, number] | 'deep' | false
+        outline: 'deep',
+        // 自定义右侧边栏的标题
+        outlineTitle: '当前页导航',
+        docFooter: {
+            prev: '上一篇',
+            next: '下一篇',
+        },
         // 顶部栏导航栏
         nav: [
             { text: '💭 学习圈子', link: '/basis/', activeMatch: '/basis/' },
@@ -91,8 +99,248 @@ export default defineConfig({
                 }
             ],
 
-            // This sidebar gets displayed when a user
-            // is on `config` directory.
+            '/interview/': [
+                {
+                    text: '介绍',
+                    link: '/interview/',
+                },
+                {
+                    text: '模拟面试',
+                    collapsed: false,
+                    items: [
+                        { text: '介绍', link: '/interview/interviewer/' },
+                        { text: '模拟面试 01', link: '/interview/interviewer/01' },
+                        { text: '模拟面试 02', link: '/interview/interviewer/02' },
+                        { text: '模拟面试 03', link: '/interview/interviewer/03' }
+                    ]
+                },
+                {
+                    text: '春招实习',
+                    collapsed: false,
+                    items: [
+                        { text: '询问面试官的问题', link: '/interview/spring-internship/interviewer/' },
+                        { text: '腾讯一面', link: '/interview/spring-internship/tencent-imweb/' },
+                        { text: '字节一面准备', link: '/interview/spring-internship/bytedance-preparation/' },
+                        { text: '字节一面', link: '/interview/spring-internship/bytedance1/' },
+                        { text: '深信服-星耀实习', link: '/interview/spring-internship/sangfor/' },
+                        { text: '恒生电子面试', link: '/interview/spring-internship/hundsun/' },
+                        { text: '腾讯云 COS 一面', link: '/interview/spring-internship/tencent-cos/' },
+                        { text: '春招知识整理', link: '/interview/spring-internship/summary/' },
+                    ]
+                },
+                {
+                    text: '2023 面试合集',
+                    collapsed: false,
+                    items: [
+                        { text: 'isolcat 三月实习', link: '/interview/isolcat/' },
+                        { text: 'HearLing 六月社招', link: '/interview/2023/hearling' }
+                    ]
+                },
+                {
+                    text: 'React',
+                    collapsed: false,
+                    items: [
+                        { text: '模拟面试', link: '/interview/react-summary/' }
+                    ]
+                },
+                {
+                    text: 'Vue',
+                    collapsed: false,
+                    items: [
+                        { text: '模拟面试', link: '/interview/vue/' }
+                    ]
+                },
+                {
+                    text: '前端基础: js/html/css/ts',
+                    collapsed: false,
+                    items: [
+                        { text: 'JS 面试大全', link: '/interview/js/' },
+                        { text: 'JS 自测清单（一）', link: '/interview/js/test/1' },
+                        { text: 'JS 自测清单（二）', link: '/interview/js/test/2' },
+                        { text: 'JS 自测清单（三）', link: '/interview/js/test/3' },
+                        { text: 'CSS 面试', link: '/interview/js/css' },
+                        { text: 'HTML 面试', link: '/interview/js/html' },
+                        { text: 'TS 面试', link: '/interview/js/ts' }
+                    ]
+                },
+                {
+                    text: '操作系统/网络/浏览器',
+                    collapsed: false,
+                    items: [
+                        { text: '操作系统', link: '/interview/system/' },
+                        { text: '网络-TCP', link: '/interview/network/tcp/' },
+                        { text: '网络-HTTP', link: '/interview/network/http/' },
+                        { text: '网络-Websocket', link: '/interview/network/websocket/' },
+                        { text: '网络-跨域问题', link: '/interview/network/cors/' },
+                        { text: '浏览器-Session/Cookie/Token', link: '/interview/browser/cookie' },
+                        { text: '浏览器-事件循环', link: '/interview/browser/principle/eventLoop' },
+                        { text: '浏览器-输入URL到页面展示发生了什么', link: '/interview/browser/process/' },
+                        { text: '浏览器-缓存', link: '/interview/browser/cache' },
+                        { text: '浏览器-开发者工具', link: '/interview/browser/performance' },
+                        { text: '浏览器-安全', link: '/interview/browser/safety/' }
+                    ]
+                },
+            ],
+
+            '/algorithm/': [
+                { text: '导读', link: '/algorithm/guide/' },
+                { text: '数据结构', link: '/algorithm/guide/dataStructure' },
+                {
+                    text: 'Hash Table 哈希表',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '介绍', link: '/algorithm/hash-table/' },
+                        { text: '1.两数之和', link: '/algorithm/hash-table/1' },
+                        { text: '3. 无重复字符的最长子串', link: '/algorithm/hash-table/3' },
+                        { text: '136. 只出现一次的数字', link: '/algorithm/hash-table/136' },
+                        { text: '349. 两个数组的交集', link: '/algorithm/hash-table/349' },
+                        { text: '560. 和为 K 的子数组 ', link: '/algorithm/hash-table/560' }
+                    ]
+                },
+                {
+                    text: 'Stack 栈',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '20. 有效的括号', link: '/algorithm/stack/20' },
+                        { text: '739. 每日温度', link: '/algorithm/stack/739' },
+                        { text: '901. 股票价格跨度', link: '/algorithm/stack/901' },
+                        { text: '907. 子数组的最小值之和', link: '/algorithm/stack/907' },
+                        { text: '921. 使括号有效的最少添加', link: '/algorithm/stack/921' },
+                        { text: '946. 验证栈序列', link: '/algorithm/stack/946' },
+                        { text: '1190. 反转每对括号间的子串', link: '/algorithm/stack/1190' },
+                        { text: '1249. 移除无效的括号', link: '/algorithm/stack/1249' }
+                    ]
+                },
+                {
+                    text: 'Queue 队列',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '933. 最近的请求次数', link: '/algorithm/queue/933' },
+                    ]
+                },
+                {
+                    text: 'Backtracking 递归与回溯',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '08.08. 有重复字符串的排列组合', link: '/algorithm/recursion-backtracking/08.08' },
+                        { text: '16.11. 跳水板', link: '/algorithm/recursion-backtracking/16.11' },
+                        { text: '17. 电话号码的字母组合', link: '/algorithm/recursion-backtracking/17' },
+                        { text: '22. 括号生成', link: '/algorithm/recursion-backtracking/22' },
+                        { text: '37. 解数独', link: '/algorithm/recursion-backtracking/37' },
+                        { text: '39. 组合总和', link: '/algorithm/recursion-backtracking/39' },
+                        { text: '40. 组合总和 II', link: '/algorithm/recursion-backtracking/40' },
+                        { text: '46. 全排列', link: '/algorithm/recursion-backtracking/46' },
+                        { text: '47. 全排列 II', link: '/algorithm/recursion-backtracking/47' },
+                        { text: '51. N 皇后', link: '/algorithm/recursion-backtracking/51' },
+                        { text: '54. 螺旋矩阵', link: '/algorithm/recursion-backtracking/54' },
+                        { text: '59. 螺旋矩阵 II', link: '/algorithm/recursion-backtracking/59' },
+                        { text: '73. 矩阵置零', link: '/algorithm/recursion-backtracking/73' },
+                        { text: '77. 组合', link: '/algorithm/recursion-backtracking/77' },
+                        { text: '78. 子集', link: '/algorithm/recursion-backtracking/78' },
+                        { text: '79. 单词搜索', link: '/algorithm/recursion-backtracking/79' },
+                        { text: '90. 子集 II', link: '/algorithm/recursion-backtracking/90' },
+                        { text: '93. 复原 IP 地址', link: '/algorithm/recursion-backtracking/93' },
+                        { text: '131. 分割回文串', link: '/algorithm/recursion-backtracking/131' },
+                        { text: '212. 单词搜索 II', link: '/algorithm/recursion-backtracking/212' },
+                        { text: '216. 组合总和 III', link: '/algorithm/recursion-backtracking/216' },
+                        { text: '401. 二进制手表', link: '/algorithm/recursion-backtracking/401' },
+                        { text: '784. 字母大小写全排列', link: '/algorithm/recursion-backtracking/784' },
+                        { text: '980. 不同路径 III', link: '/algorithm/recursion-backtracking/980' },
+                        { text: '1219. 黄金矿工', link: '/algorithm/recursion-backtracking/1219' },
+                        { text: '1291. 顺次数', link: '/algorithm/recursion-backtracking/1291' }
+                    ]
+                },
+                {
+                    text: 'Tree 二叉树',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '100. 相同的树', link: '/algorithm/binary-tree/100' },
+                        { text: '101. 对称二叉树', link: '/algorithm/binary-tree/101' },
+                        { text: '102. 二叉树的层序遍历', link: '/algorithm/binary-tree/102' },
+                        { text: '104. 二叉树的最大深度', link: '/algorithm/binary-tree/104' },
+                        { text: '108. 将有序数组转换为二叉搜索树', link: '/algorithm/binary-tree/108' },
+                        { text: '110. 平衡二叉树', link: '/algorithm/binary-tree/110' },
+                        { text: '111. 二叉树的最小深度', link: '/algorithm/binary-tree/111' },
+                        { text: '112. 路径总和', link: '/algorithm/binary-tree/112' },
+                        { text: '113. 路径总和 II', link: '/algorithm/binary-tree/113' },
+                        { text: '124. 二叉树中的最大路径和', link: '/algorithm/binary-tree/124' },
+                        { text: '129. 求根到叶子节点数字之和', link: '/algorithm/binary-tree/129' },
+                        { text: '144. 二叉树的前序遍历', link: '/algorithm/binary-tree/144' },
+                        { text: '199. 二叉树的右视图', link: '/algorithm/binary-tree/199' },
+                        { text: '236. 二叉树的最近公共祖先', link: '/algorithm/binary-tree/236' },
+                        { text: '257. 二叉树的所有路径', link: '/algorithm/binary-tree/257' },
+                        { text: '404. 左叶子之和', link: '/algorithm/binary-tree/404' },
+                        { text: '437. 路径总和 III', link: '/algorithm/binary-tree/437' },
+                        { text: '450. 删除二叉搜索树中的节点', link: '/algorithm/binary-tree/450' },
+                        { text: '501. 二叉搜索树中的众数', link: '/algorithm/binary-tree/501' },
+                        { text: '543. 二叉树的直径', link: '/algorithm/binary-tree/543' }
+                    ]
+                },
+                {
+                    text: 'Linked List 链表',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '2. 两数相加', link: '/algorithm/linked-list/2' },
+                        { text: '18. 删除链表的节点', link: '/algorithm/linked-list/18' },
+                        { text: '19. 删除链表的倒数第 N 个节点', link: '/algorithm/linked-list/19' },
+                        { text: '24. 两两交换链表中的节点', link: '/algorithm/linked-list/24' },
+                        { text: '92. 反转链表 II', link: '/algorithm/linked-list/92' },
+                        { text: '142. 环形链表 II', link: '/algorithm/linked-list/142' },
+                        { text: '203. 移除链表元素', link: '/algorithm/linked-list/203' },
+                        { text: '206. 反转链表', link: '/algorithm/linked-list/206' }
+                    ]
+                },
+                {
+                    text: 'Dynamic Programming 动态规划',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '62. 不同路径', link: '/algorithm/dp/62' },
+                        { text: '63. 不同路径 II', link: '/algorithm/dp/63' },
+                        { text: '70. 爬楼梯', link: '/algorithm/dp/70' },
+                        { text: '121. 买卖股票的最佳时机', link: '/algorithm/dp/121' },
+                        { text: '122. 买卖股票的最佳时机 II', link: '/algorithm/dp/122' },
+                        { text: '198. 打家劫舍', link: '/algorithm/dp/198' },
+                        { text: '213. 打家劫舍 II', link: '/algorithm/dp/213' },
+                        { text: '221. 最大正方形', link: '/algorithm/dp/221' },
+                        { text: '322. 零钱兑换', link: '/algorithm/dp/322' }
+                    ]
+                },
+                {
+                    text: 'Two Pointers 双指针',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '11. 盛最多水的容器', link: '/algorithm/double-pointer/11' },
+                        { text: '15. 三数之和', link: '/algorithm/double-pointer/15' },
+                        { text: '16. 最接近的三数之和', link: '/algorithm/double-pointer/16' },
+                        { text: '42. 接雨水', link: '/algorithm/double-pointer/42' },
+                        { text: '75. 颜色分类', link: '/algorithm/double-pointer/75' },
+                        { text: '209. 长度最小的子数组', link: '/algorithm/double-pointer/209' },
+                        { text: '344. 反转字符串', link: '/algorithm/double-pointer/344' },
+                        { text: '763. 划分字母区间', link: '/algorithm/double-pointer/763' },
+                        { text: '925. 长按键入', link: '/algorithm/double-pointer/925' }
+                    ]
+                }
+            ],
+
+            '/patterns/': [
+                {
+                    text: '设计模式',
+                    items: [
+                        { text: '导读', link: '/patterns/guide/' },
+                        { text: '单例模式', link: '/patterns/singleton-pattern/' },
+                        { text: '代理模式', link: '/patterns/proxy-pattern/' },
+                        { text: '提供者模式', link: '/patterns/provider-pattern/' },
+                        { text: '原型模式', link: '/patterns/prototype-pattern/' },
+                        { text: '容器/演示模式', link: '/patterns/container-presentational-pattern/' },
+                        { text: '观察者模式', link: '/patterns/observer-pattern/' },
+                        { text: '模块模式', link: '/patterns/module-pattern/' },
+                        { text: '混合模式', link: '/patterns/mixin-pattern/' },
+                        { text: '中介/中间件模式', link: '/patterns/middleware-pattern/' },
+                        { text: '高阶组件模式', link: '/patterns/hoc-pattern/' }
+                    ]
+                }
+            ],
+
             '/project/': [
                 {
                     text: '工程化',
@@ -131,7 +379,7 @@ export default defineConfig({
         // 页脚配置
         footer: {
             message: '用心去做高质量的专业前端内容网站，欢迎 <a style="color: #0066ff" href="https://github.com/panqingjie00/my-blog">star ⭐</a> 让更多人发现',
-            copyright: 'MIT License | 版权所有 © 0000-9999 Chocolate and ChoDocs contributors'
+            copyright: 'MIT License | 版权所有 © 2023-2024 Chocolate and ChoDocs contributors'
         },
         // github 编辑链接
         editLink: {
@@ -143,4 +391,25 @@ export default defineConfig({
     },
     // 开启/关闭 最后更新时间
     lastUpdated: true,
+
+    // markdown: {
+    //     theme: 'material-theme-palenight',
+    //     lineNumbers: true,
+
+    //     // adjust how header anchors are generated,
+    //     // useful for integrating with tools that use different conventions
+    //     anchor: {
+    //         slugify(str) {
+    //             return encodeURIComponent(str)
+    //         }
+    //     }
+    // }
+    markdown: {
+        // TODO
+        theme: {
+            dark: 'material-theme-darker',
+            light: 'light-plus'
+        },
+        lineNumbers: true,
+    },
 })
