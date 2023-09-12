@@ -22,7 +22,7 @@ export default defineConfig({
         },
         // 顶部栏导航栏
         nav: [
-            { text: '💭 学习圈子', link: '/basis/', activeMatch: '/basis/' },
+            { text: '💭 我的笔记', link: '/note/', activeMatch: '/basis/' },
             {
                 text: '🔥 专栏',
                 items: [
@@ -44,6 +44,7 @@ export default defineConfig({
                 items: [
                     { text: '✏️ 随笔', link: '/essay/' },
                     { text: '🌱 青葱岁月', link: '/green/ch' },
+                    { text: '📄 毕业论文', link: '/paper/' },
                 ],
             },
             {
@@ -362,6 +363,29 @@ export default defineConfig({
                                 { text: '前端插件', link: '/favorites/front-end/plugin' },
                             ]
                         },
+                    ]
+                }
+            ],
+            // 毕业论文
+            '/paper/': [
+                {
+                    text: '论文查找',
+                    link: '/paper/find'
+                },
+                {
+                    text: '论文相关资料',
+                    link: '/paper/'
+                }
+            ],
+            // 我的笔记
+            '/note/': [
+                { text: '关于我的笔记', link: '/note/' },
+                {
+                    text: '前端面试题',
+                    collapsed: false,
+                    items: [
+                        { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
+                        { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                     ]
                 }
             ],
