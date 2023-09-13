@@ -158,7 +158,7 @@ let a = b; // 先读 b，用 RHS右查询 用 [[GET]]，再写入 a，LHS左查�
 <br/>
 
 ##### 1. 阿里四面真题
-```js
+```js{15,20,25,28}
 //实例方法
 Object.prototype.a = function () {
    console.log('a');
@@ -191,7 +191,7 @@ F.b();//b
 ```
 
 ##### 2. 输出什么？
-```js
+```js{5}
 function A() {}
 
 A.prototype.n = 3;
@@ -214,3 +214,75 @@ console.log(a.n,b.n,c.n);
 ```
 :::
 
+##### 3. 输出什么？
+```js{11}
+function A() {}
+
+A.prototype.m = { t: 1 };
+A.prototype.add = function() {
+   this.m = {};
+}
+
+var a = new A();
+a.add();
+
+console.log(a.m.t);
+```
+::: details 点击查看答案
+```js
+undefined
+```
+:::
+
+##### 4. 比较相等吗？
+```js
+function Person(name, age) {
+   this.name = name;
+   this.age = age;
+   this.eat = function() {
+      console.log(age + '岁的' + name + '在吃饭。');
+   }
+}
+
+Person.run = function() {} //静态方法
+Person.prototype.walk = function() {}
+
+let p1 = new Person('xiaoming', 18);
+let p2 = new Person('xiaoming', 18);
+
+console.log(p1.eat === p2.eat);
+console.log(p1.run === p2.run);
+console.log(p1.walk === p2.walk);
+```
+::: details 点击查看答案
+```js
+false
+true
+true
+```
+:::
+
+##### 5. foo1能访问到哪些属性？
+```js
+function foo() {
+   this.some = '222'
+   let ccc = 'ccc'
+   foo.obkorol = 'obkorol'
+   foo.prototype.a = 'aaa'
+}
+
+foo.koro = '扣肉';
+
+foo.prototype.test = 'test';
+
+let foo1 = new foo();
+foo.prototype.test = 'test2';
+
+//问：foo1 访问到哪些属性？
+```
+::: details 点击查看答案
+```js
+// 能访问到以下3个属性：
+some: '222', a: 'aaa', test: 'test2'
+```
+:::
