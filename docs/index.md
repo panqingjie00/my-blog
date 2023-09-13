@@ -11,19 +11,19 @@ hero:
     actions:
         - theme: brand
           text: 开始阅读
-          link: /test
+          link: /note/
         - theme: alt
           text: 学习圈子
           link: https://github.com/panqingjie00
         - theme: alt
           text: 面试大全
-          link: https://github.com/panqingjie00
+          link: /interview/
 
 features:
     - icon: 📋
       title: 面试专栏
       details: 海量前端面试问题解答，一站式阅读体验
-      link: /basis/
+      link: /interview/
       linkText: 开始刷题
       rel: external
     - icon: 💬
@@ -35,7 +35,7 @@ features:
     - icon: 📓
       title: 前端算法
       details: 不再畏惧面试算法，提供刷题路线
-      link: /basis/
+      link: /algorithm/guide/
       linkText: 开始刷题
       rel: external
     - icon: 🚚
@@ -45,10 +45,10 @@ features:
       linkText: 开始查阅
       rel: external
     - icon: 💭
-      title: 学习圈子
-      details: 打造专业的前端技术氛围社群，低调务实
-      link: /basis/
-      linkText: 加入圈子
+      title: 我的笔记
+      details: 学习任何东西记的笔记
+      link: /note/
+      linkText: 开始查阅
       rel: external
     - icon: 🔧
       title: 编程工具
