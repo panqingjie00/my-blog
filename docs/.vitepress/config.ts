@@ -389,6 +389,10 @@ export default defineConfig({
                     ]
                 }
             ],
+            // 随笔
+            // '/essay/': [
+
+            // ],
 
             '/project/': [
                 {
