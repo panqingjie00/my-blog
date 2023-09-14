@@ -387,7 +387,15 @@ export default defineConfig({
                         { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
                         { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                     ]
-                }
+                },
+                {
+                    text: 'ECMAScript 6',
+                    collapsed: false,
+                    items: [
+                        { text: 'Proxy', link: '/note/es6/proxy' },
+                        { text: 'Reflect', link: '/note/es6/reflect' },
+                    ]
+                },
             ],
             // 随笔
             // '/essay/': [
