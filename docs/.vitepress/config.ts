@@ -397,10 +397,11 @@ export default defineConfig({
                     ]
                 },
             ],
-            // 随笔
-            // '/essay/': [
-
-            // ],
+            //随笔
+            '/essay/': [
+                { text: '名人名言', link: '/essay/' },
+                { text: '优美诗歌', link: '/essay/poetry' },
+            ],
 
             '/project/': [
                 {
