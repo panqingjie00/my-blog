@@ -21,12 +21,12 @@ const a = new foo() // 当一个普通函数左侧加了 new 关键字，它就�
 以上面的构造函数foo()为例
 1. 绑定`this`为空对象
 
-<img src="/markdownImgs/image-20221222190430489.png" alt="image-20221222190430489" style="zoom:60%;"  data-fancybox="gallery"/>
+<img src="/markdownImgs/image-20221222190430489.png" alt="image-20221222190430489" style="zoom:60%;cursor:zoom-in"  data-fancybox="gallery"/>
 
 2. 给空对象添加`[[Prototype]](__proto__)`隐式属性，并指向`new`后面函数（也就是foo()）的`prototype`属性。（这一步其实就是：`this.__proto__ = foo.prototype`）  
 **注：这就是为什么所有对象都有`[[Prototype]]（__proto__）`这个属性，因为所有对象本质上都是`new`出来的，`new`的过程中就会给对象添加`[[Prototype]]`隐式属性。**
 
-<img src="/markdownImgs/image-20221222220622661.png" alt="image-20221222220622661" style="zoom:67%;" data-fancybox="gallery"/>
+<img src="/markdownImgs/image-20221222220622661.png" alt="image-20221222220622661" style="zoom:67%;cursor:zoom-in" data-fancybox="gallery"/>
 
 3. 正常执行函数
 4. 如果函数返回的是基本类型，则返回`this`的值，否则返回原函数的返回值。  
@@ -47,7 +47,7 @@ a.b; //由上可知，a 指向 foo.prototype,其中并没有 属性 b，返回 u
 1. 判断对象`a`中有没有属性
 2. 如果没有，沿着原型链`a.__proto__`一直递归查找（注意，这时又触发了`[[GET]]`），如果最后没找到，返回`undefined`
 
-<img src="/markdownImgs/image-20221222223431234.png" alt="image-20221222223431234" style="zoom:67%;margin-bottom: 30px" data-fancybox="gallery"/>
+<img src="/markdownImgs/image-20221222223431234.png" alt="image-20221222223431234" style="zoom:67%;margin-bottom: 30px;cursor:zoom-in" data-fancybox="gallery"/>
 
 #### 原型链的应用
 > **instanceof**
@@ -148,7 +148,7 @@ let a = b; // 先读 b，用 RHS右查询 用 [[GET]]，再写入 a，LHS左查�
 
 **[[PUT]] LHS 的执行流程用一张图概括：**
 
-<img src="/markdownImgs/image-20221223180442317.png" alt="image-20221223180442317" style="zoom:100%;" data-fancybox="gallery"/>
+<img src="/markdownImgs/image-20221223180442317.png" alt="image-20221223180442317" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 **简单总结一句话：如果是 `基本类型`、`引用类型的引用`、`原型链最终没有找到`这三种情况，则都是在自身对象创建一个同名属性覆盖掉。如果是访问引用数据类型内的数据，则修改访问数据**
 
