@@ -411,6 +411,7 @@ export default defineConfig({
                     collapsed: false,
                     items: [
                         { text: 'BEM架构', link: '/note/css/bem' },
+                        { text: 'BFC机制', link: '/note/css/bfc' },
                     ]
                 },
             ],
