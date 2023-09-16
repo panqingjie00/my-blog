@@ -1,10 +1,20 @@
 import { defineConfig } from 'vitepress'
+import mdItCustomAttrs from 'markdown-it-custom-attrs'  // 引入 markdown-it 自定义属性插件
+
 
 export default defineConfig({
     title: 'GravityDocs',
     titleTemplate: '一站式前端内容网站，包括学习路线、知识体系',
     // 页签图标
-    head: [['link', { rel: 'icon', href: '../public/favicon.ico' }]],
+    head: [
+        ['link', { rel: 'icon', href: '../public/favicon.ico' }],
+        // cdn 方式 引入 fancybox js 和 css 文件
+        [
+            "link",
+            { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" },
+        ],
+        ["script", { src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }],
+    ],
     // 网站描述
     description: '一个基于VitePress构建的个人博客网站',
     // 开启/关闭 最后更新时间
@@ -396,6 +406,13 @@ export default defineConfig({
                         { text: 'Reflect', link: '/note/es6/reflect' },
                     ]
                 },
+                {
+                    text: 'CSS',
+                    collapsed: false,
+                    items: [
+                        { text: 'BEM架构', link: '/note/css/bem' },
+                    ]
+                },
             ],
             //随笔
             '/essay/': [
@@ -459,5 +476,12 @@ export default defineConfig({
             light: 'light-plus'
         },
         lineNumbers: true,
+        // 配置markdown 使用自定义插件（fancybox 图片放大预览）
+        // 详情参考这篇csdn文章：https://blog.csdn.net/www1577791638/article/details/126091280
+        config: (md) => {
+            md.use(mdItCustomAttrs, 'image', {
+                'data-fancybox': "gallery"
+            })
+        }
     },
 })
