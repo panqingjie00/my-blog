@@ -3,8 +3,8 @@ html.dark {
   }
   
   .dark .VPContent {
-    background-color: rgb(10, 10, 11);
-    background-image: url("/grid.svg");
+    /* background-color: rgb(10, 10, 11);
+    background-image: url("/grid.svg"); */
   }
   
   .vp-doc h2 {

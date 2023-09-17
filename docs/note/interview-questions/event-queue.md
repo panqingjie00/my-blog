@@ -159,9 +159,9 @@ setTimeout(function() {
 ```js
 1 7 6 8 2 4 3 5 9 11 10 12
 ```
+:::
 
 #### ∞. 相关参考资料
-:::
 ::: tip 相关参考资料
 - [JS核心理论之《运行机制与宏任务、微任务》 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/136366037)
 - [微任务、宏任务与Event-Loop](https://juejin.cn/post/6844903657264136200)
