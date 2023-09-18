@@ -3,9 +3,9 @@
 - 钼矿选矿工艺流程介绍：https://www.sohu.com/a/564171043_121319644
 - 矿山设备分类：http://www.bjdeli.com/news/xw2/178.html
 - LSTM Informer：http://www.inspinia.net/a/18239.html?action=onClick
+- ResNet深度残差网络：https://zhuanlan.zhihu.com/p/408309397
 
 论文：
-- [基于状态监测技术的关键矿山设备运行参数综合监测系统](https://www.x-mol.com/paper/1335579485118361620/t?adv)
 - [:star::star::star:基于模糊DPCA空间特征值相似度的设备故障检测与健康评估](https://www.x-mol.com/paper/1411049730077413376/t?adv)
 - [工业无线传感器网络的障碍物感知智能故障检测方案](https://www.x-mol.com/paper/1508743680121135104/t?adv)
 - [基于物联网和LightGBM模型的带式输送机故障诊断系统研究](https://www.x-mol.com/paper/1635689490010402816/t?adv)
@@ -16,10 +16,7 @@
 - [:star::star:基于混合深度自编码网络的轴承故障新颖性检测与故障诊断方法](https://www.x-mol.com/paper/1673821418673651712/t?adv)
 - [:star:融合多核 SVM 互相关的轴承同时故障检测](https://www.x-mol.com/paper/1674830508568854528/t?adv)
 - [:star::star::star:基于变量投影的故障检测与诊断算法](https://www.x-mol.com/paper/1689307723231678464/t?adv)
-- [使用图像分类模型对感应电机机械故障进行声学信号故障检测的比较](https://www.x-mol.com/paper/1658246497460113408/t?adv)
-- [:star:非线性随机分布系统的故障检测和预测方案--残差](https://www.x-mol.com/paper/1651439347753037824/t?adv)
 - [:star::star:使用自适应 Superlet 进行早期智能轴承故障检测](https://www.x-mol.com/paper/1643378231038717952/t?adv)
 - [利用声发射进行谐波减速器故障检测](https://www.x-mol.com/paper/1681835650849685504/t?adv)
 - [:star:基于零故障样本的工业机器人智能故障检测的残差变换关系网络](https://www.x-mol.com/paper/1634781220219449344/t?adv)
 - [:star::star:用于制造中新型故障检测和故障分类/诊断的基于变压器的方法：旋转系统应用](https://www.x-mol.com/paper/1632307038934175744/t?adv)
-- [:star::star:star:工业设备的数据驱动故障诊断方法：综述](https://www.x-mol.com/paper/1664057723223523328/t?adv)
