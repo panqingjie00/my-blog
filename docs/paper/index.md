@@ -4,6 +4,8 @@
 - 矿山设备分类：http://www.bjdeli.com/news/xw2/178.html
 - LSTM Informer：http://www.inspinia.net/a/18239.html?action=onClick
 - ResNet深度残差网络：https://zhuanlan.zhihu.com/p/408309397
+- 时间序列预测方法汇总：https://zhuanlan.zhihu.com/p/471014006?utm_medium=social&utm_oi=29509352947712&utm_id=0
+- 电子系统健康管理预测学习笔记：https://blog.csdn.net/qq_42984090/article/details/125801129
 
 论文：
 - [:star::star::star:基于模糊DPCA空间特征值相似度的设备故障检测与健康评估](https://www.x-mol.com/paper/1411049730077413376/t?adv)
