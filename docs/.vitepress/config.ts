@@ -376,6 +376,27 @@ export default defineConfig({
                     ]
                 }
             ],
+            // 编程 - 资源导航
+            '/program/': [
+                {
+                    text: '💻 编程学习',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        { text: '介绍', link: '/program/' },
+                    ]
+                },
+                {
+                    text: '项目实战',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        {
+                            items: [
+                                { text: 'Vue2开发去哪儿网App', link: '/program/where-to-go/' },
+                            ]
+                        },
+                    ]
+                }
+            ],
             // 毕业论文
             '/paper/': [
                 {
