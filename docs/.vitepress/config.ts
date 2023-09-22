@@ -391,11 +391,22 @@ export default defineConfig({
                     items: [
                         {
                             items: [
-                                { text: 'Vue2开发去哪儿网App', link: '/program/where-to-go/' },
+                                { text: 'Vue2开发去哪儿网App', link: '/program/project/where-to-go/' },
                             ]
                         },
                     ]
-                }
+                },
+                {
+                    text: '观B站Js视频有感',
+                    collapsed: false,  // 折叠开关
+                    items: [
+                        {
+                            items: [
+                                { text: '颠覆认知的JavaScript', link: '/program/bilibili-js/bjs1' },
+                            ]
+                        },
+                    ]
+                },
             ],
             // 毕业论文
             '/paper/': [
