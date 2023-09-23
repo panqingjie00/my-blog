@@ -428,6 +428,7 @@ export default defineConfig({
                     items: [
                         { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
                         { text: '原型与原型链', link: '/note/interview-questions/prototype' },
+                        { text: '函数柯里化(Currying)', link: '/note/interview-questions/currying' },
                     ]
                 },
                 {
