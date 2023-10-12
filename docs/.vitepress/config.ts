@@ -426,7 +426,23 @@ export default defineConfig({
                     items: [
                         { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
                         { text: '原型与原型链', link: '/note/interview-questions/prototype' },
+                        { text: '继承', link: '/note/interview-questions/extends' },
                         { text: '函数柯里化(Currying)', link: '/note/interview-questions/currying' },
+                    ]
+                },
+                {
+                    text: 'CSS',
+                    collapsed: false,
+                    items: [
+                        { text: 'BEM架构', link: '/note/css/bem' },
+                        { text: 'BFC机制', link: '/note/css/bfc' },
+                    ]
+                },
+                {
+                    text: 'JavaScript',
+                    collapsed: false,
+                    items: [
+                        { text: '继承', link: '/note/js/bem' },
                     ]
                 },
                 {
@@ -438,11 +454,10 @@ export default defineConfig({
                     ]
                 },
                 {
-                    text: 'CSS',
+                    text: 'Node',
                     collapsed: false,
                     items: [
-                        { text: 'BEM架构', link: '/note/css/bem' },
-                        { text: 'BFC机制', link: '/note/css/bfc' },
+                        { text: 'node基础', link: '/note/node/' },
                     ]
                 },
             ],
