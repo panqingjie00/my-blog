@@ -424,6 +424,7 @@ export default defineConfig({
                     text: '前端面试题',
                     collapsed: false,
                     items: [
+                        { text: 'JS作用域和闭包', link: '/note/interview-questions/scope-closure' },
                         { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
                         { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                         { text: '继承', link: '/note/interview-questions/extends' },
