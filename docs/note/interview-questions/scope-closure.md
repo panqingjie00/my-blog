@@ -1,6 +1,6 @@
 # JS 作用域和闭包
 ## 一、预编译
-### 1.概念
+### 1 概念
 ---
 #### 1）什么是预编译
 首先，我们要知道`JavaScript`是解释性语言
@@ -133,7 +133,7 @@ a()
 <img src="/markdownImgs/scope4.png" alt="image-20221223180442317" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 
-### 2.全局预编译
+### 2 全局预编译
 ---
 #### 1）流程
 1. 查找变量声明，作为`GO`对象的属性名，值为`undefined`
@@ -167,7 +167,7 @@ console.log(a);
 #### 2）结论
 如果存在同名的变量和函数，函数的优先级更高   
 
-### 3.函数预编译
+### 3 函数预编译
 ---
 #### 1）流程
 1. 在函数被调用时，为当前函数产生`AO对象`
@@ -247,6 +247,208 @@ a(1)
 - 只要声明了局部函数，函数的优先级最高
 - 没有声明局部函数，实参的优先级高
 - 整体来说：<mark>局部函数 > 实参 > 局部变量</mark>
+
+## 二.作用域与作用域链
+---
+### 1 概念
+---
+#### 1）域
+>域：范围，区域
+
+在js中，作用域分为**全局作用域**和**局部作用域**
+- 全局作用域：由`<script>`标签产生的区域，从计算机的角度可以理解为window对象
+- 局部作用域：由函数产生的区域，从计算机的角度可以理解为该甘薯的AO对象
+
+#### 2）作用域链
+在js中，函数存在一个隐式属性`[[scopes]]`，这个属性用来保存当前函数在执行时的环境（上下文），由于在数据结构上是链式的，也被成为作用域链，我们可以把它理解成一个**数组**
+> 函数类型存在[[scopes]]属性
+
+```js
+function a() {}
+console.dir(a) // 打印内部结构
+```
+> 输出
+
+<img src="/markdownImgs/scope8.png" alt="image-20221223180442317" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
+
+`[[scopes]]`属性在函数声明时产生，在函数被调用时更新  
+`[[scopes]]`属性记录当前函数的执行环境  
+在函数被调用时，将该函数的AO对象压入到`[[scopes]]`中
+> 示例
+
+```js
+function a() {
+    console.dir(a)
+    function b() {
+        console.dir(b)
+        function c() {
+            console.dir(c)
+        }
+        c()
+    }
+    b()
+}
+a()
+```
+> 演示
+
+<img src="/markdownImgs/scope9.png" alt="image-20221223180442317" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
+
+`[[scopes]]`属性是一个数组的形式
+0：是函数a的AO对象
+1：是GO对象
+
+### 2 作用
+---
+作用域链有什么作用呢？
+在访问变量或者函数时，会在作用域链上依次查找，最直观的表现是：
+- 内部函数可以使用外部函数声明的变量
+>示例
+
+```js
+function a() {
+    var aa = 111
+    function b() {
+        console.log(aa);
+    }
+    b()
+}
+a()
+```
+- 在函数a中声明定义了变量aa
+- 在函数b中没有声明，却可以使用
+
+> 思考
+
+如果在函数b中，也定义同名变量aa会怎样
+
+>示例
+
+```js
+function a() {
+    var aa = 111
+    function b() {
+        var aa = 222
+        console.log(aa);
+    }
+    b()
+}
+a()
+```
+第一个问题：函数a和函数b里的变量aa是不是同一个变量？
+第二个问题：函数b里打印的aa是用的谁的？
+
+>结论
+
+内部函数可以使用外部函数的变量
+外部函数不能使用内部函数的变量
+
+## 三.闭包
+---
+闭包的形成：如果在内部函数使用了外部函数的变量，就会形成闭包，闭包保留了外部环境的引用
+闭包的保持：如果内部函数被返回到了外部函数的外面，在外部函数执行完成后，依然可以使用闭包里的值
+
+### 1 闭包的形成
+---
+>示例
+
+```js
+function a() {
+    var aa = 100
+    function b() {
+        console.log(aa);
+    }
+    b()
+}
+a()
+```
+>演示
+
+<img src="/markdownImgs/scope10.png" alt="image-20221223180442317" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
+<br>
+<img src="/markdownImgs/scope11.png" alt="image-20221223180442317" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
+
+从代码的角度看，闭包也是一个对象，闭包里包含哪些东西呢？
+在内部函数b中使用了哪些外部函数a中的变量，这些变量就会<mark>作为闭包对象的属性保存下来！！！</mark>
+
+### 2 闭包的保持
+---
+如果希望在函数调用结束后，闭包依然保持，就需要将内部函数返回到外部函数的外部
+>示例
+
+```js
+function a() {
+    var num = 0
+    function b() {
+        console.log(num++);
+    }
+    return b
+}
+var demo = a()
+console.dir(demo)
+demo()
+demo()
+```
+
+## 四.闭包的应用
+---
+### 1 闭包的两面性
+---
+>任何事物都有两面性
+
+好处：一般来说，在函数外部是没办法访问函数内部的变量的，设计闭包最主要的作用就是为了解决这个问题。
+坏处：有时不注意使用了闭包，会导致意想不到的结果
+
+### 2 闭包的应用
+---
+1. 在函数外部访问私有变量
+2. 实现封装
+3. 防止污染全局变量
+>示例
+
+在函数外部访问私有变量
+```js
+ function a() {
+    var num = 0
+    function b() {
+        console.log(num++);
+    }
+    return b
+}
+var demo = a()
+console.dir(demo)
+demo()
+demo()
+```
+
+## 五.相关题目
+---
+>题目一
+```js
+var a = 0
+var b = 0
+function A(a) {
+    A = function (b) {
+        alert(a + b++)
+    }
+    alert(a++)
+}
+A(1)
+A(2)
+```
+
+::: details 查看答案
+```js
+先 alert 1
+后 alert 4
+```
+:::
+>解析
+
+本题的重点在于`A = function (b) { alert(a + b++) }`这里  
+1. 第一次`A(1)`执行到这里，将 `A(a){...}`内部的一个`匿名函数function(b) {...}`赋值给了 `A`  
+2. 而此时，`A(a){...}`没有`A`这个变量，因此沿着`作用域链`找，找到了`GO.A`，将内部函数的引用传到了外部函数的外部
+3. 又因为，`function(b){...}`中的`alert(a + b++)`使用到了外部函数的 a 变量，因此，`function A(a) {...}`作为包含a属性的闭包对象保持下来。
 
 
 
