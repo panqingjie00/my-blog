@@ -458,7 +458,8 @@ export default defineConfig({
                     text: 'Node',
                     collapsed: false,
                     items: [
-                        { text: 'node基础', link: '/note/node/' },
+                        { text: '介绍', link: '/note/node/' },
+                        { text: 'fs', link: '/note/node/fs' },
                     ]
                 },
             ],
