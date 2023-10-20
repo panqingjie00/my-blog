@@ -144,7 +144,7 @@ export default defineConfig({
                     text: '2023 面试合集',
                     collapsed: false,
                     items: [
-                        { text: 'isolcat 三月实习', link: '/interview/isolcat/' },
+                        { text: 'CQRD中国民航信息', link: '/interview/cqrd/' },
                         { text: 'HearLing 六月社招', link: '/interview/2023/hearling' }
                     ]
                 },
