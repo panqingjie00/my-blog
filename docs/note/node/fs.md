@@ -46,12 +46,41 @@ fs.readFile('./files/1.txt', 'utf-8', function (err, result) {
 ### 3.1 fs.write() 的语法格式
 使用`fs.writeFile()`方法，可以向指定的文件中写入内容，语法格式如下：
 ```js
-fs.write(file, data[, options], callback)
+fs.writeFile(file, data[, options], callback)
 ```
 参数解读：
 - 参数1：必选参数，需要指定一个文件路径的字符串，表示文件的存放路径。
 - 参数2：必选参数，表示要写入的内容。
 - 参数3：可选参数，表示以什么格式写入文件内容，默认值是 utf-8
 
+## 4 fs模块 - 路径动态拼接的问题
+在使用 fs 模块操作文件时，如果提供的操作路径是以`./`或`../`开头的`相对路径`时，很容易出现路径动态拼接错误的问题。  
+>原因：
 
+代码在运行的时候，**会以执行 node 命令时所处的目录**，动态拼接出被操作文件的完整路径。
+>演示
+
+```js
+fs.readFile('./files/1.txt', 'utf-8', function(err, data) {
+    .....
+})
+```
+::: danger 动态路径错误问题
+当你在` E:\node-basis> node ./fs.js`  实际读取的路径是：`E:\node-basis\files\1.txt`  
+因此，当你 cd .. 切换到 `E:\> node ./fs.js`   实际读取的路径是：`E:\files\1.txt`  (并没有这个文件！！！报错)
+:::
+
+>解决方案1（移植性很差、不利于维护）
+
+在使用 fs 模块操作文件时，**直接提供完整的路径**，不要提供./或../开头的相对路径，从而防止路径动态拼接的问题。
+
+>解决方案2（移植性好、利于维护）
+
+使用 `__dirname` (代表当前文件所处的目录)
+```js
+fs.readFile(__dirname + '/files/1.txt', 'utf-8', function(err, data) {
+    .....
+})
+```
+这样就不会出现路径动态拼接错误问题了
 
