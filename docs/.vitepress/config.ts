@@ -141,6 +141,15 @@ export default defineConfig({
                     ]
                 },
                 {
+                    text: '2023 笔试合集',
+                    collapsed: false,
+                    items: [
+                        { text: 'HTML', link: '/interview/bishi/html' },
+                        { text: 'CSS', link: '/interview/bishi/css' },
+                        { text: 'JavaScript', link: '/interview/bishi/js' },
+                    ]
+                },
+                {
                     text: '2023 面试合集',
                     collapsed: false,
                     items: [
@@ -460,6 +469,8 @@ export default defineConfig({
                     items: [
                         { text: '介绍', link: '/note/node/' },
                         { text: 'fs', link: '/note/node/fs' },
+                        { text: 'path', link: '/note/node/path' },
+                        { text: 'http', link: '/note/node/http' },
                     ]
                 },
             ],
