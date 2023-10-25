@@ -147,6 +147,10 @@ export default defineConfig({
                         { text: 'HTML', link: '/interview/bishi/html' },
                         { text: 'CSS', link: '/interview/bishi/css' },
                         { text: 'JavaScript', link: '/interview/bishi/js' },
+                        { text: 'HTTP', link: '/interview/bishi/http' },
+                        { text: 'webpack', link: '/interview/bishi/webpack' },
+                        { text: '数据结构', link: '/interview/bishi/dataStructure' },
+                        { text: '操作系统', link: '/interview/bishi/os' },
                     ]
                 },
                 {
