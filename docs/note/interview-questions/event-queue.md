@@ -5,7 +5,7 @@
 
 > 程序运行需要有它自己的`内存空间`，可以把这块内存空间简单理解为`进程`
 
-<img src="渡一大师课.assets/image-20231113192949722.png" alt="image-20231113192949722" style="zoom: 33%;" />
+<img src="/duyi/image-20231113192949722.png" alt="image-20231113192949722" style="zoom: 100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 每个应用至少有一个进程，进程之间相互独立，即使要通信，也需要双方同意。
 
@@ -19,7 +19,7 @@
 
 如果程序需要同时执行多块代码，主线程就会启动更多的线程来执行代码，所以一个进程中可以包含多个线程。
 
-<img src="渡一大师课.assets/image-20231113200158364.png" alt="image-20231113200158364" style="zoom:33%;" />
+<img src="/duyi/image-20231113200158364.png" alt="image-20231113200158364" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 ### 浏览器有哪些进程和线程？
 
@@ -29,7 +29,7 @@
 
 为了避免相互影响，为了减少连环崩溃的几率，当启动浏览器后，它会自动启动多个进程。
 
-<img src="渡一大师课.assets/image-20231113201241489.png" alt="image-20231113201241489" style="zoom:33%;" />
+<img src="/duyi/image-20231113201241489.png" alt="image-20231113201241489" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 > 可以在浏览器的任务管理器中查看当前的所有进程
 
@@ -79,7 +79,7 @@
 
 渲染主线程相出了一个绝妙的主意来处理这个问题：**排队**
 
-<img src="渡一大师课.assets/image-20231113213504501.png" alt="image-20231113213504501" style="zoom: 50%;" />
+<img src="/duyi/image-20231113213504501.png" alt="image-20231113213504501" style="zoom: 100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 
 
@@ -105,13 +105,13 @@
 
 如果让渲染主线程等待这些任务的时机到达，就会导致主线程长期处于**阻塞**的状态，从而导致浏览器**卡死**
 
-<img src="渡一大师课.assets/image-20231113220141828.png" alt="image-20231113220141828" style="zoom:50%;" />
+<img src="/duyi/image-20231113220141828.png" alt="image-20231113220141828" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 **渲染主线程承担这极其重要的工作，无论如何都不能阻塞！**
 
 因此，浏览器选择**异步**来解决这个问题
 
-<img src="渡一大师课.assets/image-20231113221023388.png" alt="image-20231113221023388" style="zoom:50%;" />
+<img src="/duyi/image-20231113221023388.png" alt="image-20231113221023388" style="zoom:100%;cursor:zoom-in" data-fancybox="gallery"/>
 
 使用异步的方式，**渲染主线程永不阻塞**
 
