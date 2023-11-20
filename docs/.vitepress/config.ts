@@ -437,8 +437,8 @@ export default defineConfig({
                     text: '前端面试题',
                     collapsed: false,
                     items: [
-                        { text: 'JS作用域和闭包', link: '/note/interview-questions/scope-closure' },
                         { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
+                        { text: 'JS作用域和闭包', link: '/note/interview-questions/scope-closure' },
                         { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                         { text: '继承', link: '/note/interview-questions/extends' },
                         { text: '函数柯里化(Currying)', link: '/note/interview-questions/currying' },
