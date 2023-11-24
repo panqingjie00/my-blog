@@ -456,7 +456,7 @@ export default defineConfig({
                     text: 'JavaScript',
                     collapsed: false,
                     items: [
-                        { text: '继承', link: '/note/js/bem' },
+                        { text: '继承', link: '/note/js/inherit' },
                     ]
                 },
                 {
