@@ -437,11 +437,21 @@ export default defineConfig({
                     text: '前端面试题',
                     collapsed: false,
                     items: [
-                        { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
-                        { text: 'JS作用域和闭包', link: '/note/interview-questions/scope-closure' },
-                        { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                         { text: '继承', link: '/note/interview-questions/extends' },
-                        { text: '函数柯里化(Currying)', link: '/note/interview-questions/currying' },
+                    ]
+                },
+                {
+                    text: '浏览器',
+                    collapsed: false,
+                    items: [
+                        { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
+                    ]
+                },
+                {
+                    text: 'HTML',
+                    collapsed: false,
+                    items: [
+
                     ]
                 },
                 {
@@ -456,7 +466,10 @@ export default defineConfig({
                     text: 'JavaScript',
                     collapsed: false,
                     items: [
+                        { text: 'JS作用域和闭包', link: '/note/interview-questions/scope-closure' },
+                        { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                         { text: '继承', link: '/note/js/inherit' },
+                        { text: '函数柯里化(Currying)', link: '/note/interview-questions/currying' },
                     ]
                 },
                 {
@@ -522,7 +535,7 @@ export default defineConfig({
         // 页脚配置
         footer: {
             message: '用心去做高质量的专业前端内容网站，欢迎 <a style="color: #0066ff" href="https://github.com/panqingjie00/my-blog">star ⭐</a> 让更多人发现',
-            copyright: 'MIT License | 版权所有 © 2023-2024 Chocolate and ChoDocs contributors'
+            copyright: 'MIT License | 版权所有 © 2023-2024 PanQingJie and PqjDocs contributors'
         },
         // github 编辑链接
         editLink: {
