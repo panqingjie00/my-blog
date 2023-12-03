@@ -352,6 +352,7 @@ export default defineConfig({
                     text: '设计模式',
                     items: [
                         { text: '导读', link: '/patterns/guide/' },
+                        { text: '发布-订阅者模式', link: '/patterns/publish-subscribe-pattern/' },
                         { text: '单例模式', link: '/patterns/singleton-pattern/' },
                         { text: '代理模式', link: '/patterns/proxy-pattern/' },
                         { text: '提供者模式', link: '/patterns/provider-pattern/' },
