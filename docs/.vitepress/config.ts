@@ -446,6 +446,7 @@ export default defineConfig({
                     collapsed: false,
                     items: [
                         { text: '事件循环、任务队列', link: '/note/interview-questions/event-queue' },
+                        { text: '浏览器渲染原理、过程', link: '/note/interview-questions/browser-render' },
                     ]
                 },
                 {
