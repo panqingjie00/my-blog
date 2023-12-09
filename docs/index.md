@@ -70,7 +70,7 @@ features:
       rel: external
     - icon: 🚩
       title: 拥抱开源
-      details: 文档开源，版权 ChoDocs 所有，禁商业行为
+      details: 文档开源，版权 PQJDocs 所有，禁商业行为
       link: https://github.com/panqingjie00/my-blog
       linkText: 欢迎star⭐️
       rel: external
