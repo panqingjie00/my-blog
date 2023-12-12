@@ -471,6 +471,7 @@ export default defineConfig({
                         { text: 'JS作用域和闭包', link: '/note/interview-questions/scope-closure' },
                         { text: '原型与原型链', link: '/note/interview-questions/prototype' },
                         { text: '继承', link: '/note/js/inherit' },
+                        { text: '原型链继承问题的本质', link: '/note/js/proto-inherit' },
                         { text: '函数柯里化(Currying)', link: '/note/interview-questions/currying' },
                     ]
                 },
