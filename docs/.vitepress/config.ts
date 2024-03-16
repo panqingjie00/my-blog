@@ -453,7 +453,9 @@ export default defineConfig({
                     text: 'HTML',
                     collapsed: false,
                     items: [
-
+                        { text: 'HTML元素周期表', link: '/note/html/allHTMLTags' },
+                        { text: 'HTML语义化', link: '/note/html/semantic' },
+                        { text: '空白折叠', link: '/note/html/blankFold' },
                     ]
                 },
                 {
