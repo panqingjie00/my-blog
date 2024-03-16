@@ -456,6 +456,9 @@ export default defineConfig({
                         { text: 'HTML元素周期表', link: '/note/html/allHTMLTags' },
                         { text: 'HTML语义化', link: '/note/html/semantic' },
                         { text: '空白折叠', link: '/note/html/blankFold' },
+                        { text: '图片元素', link: '/note/html/img' },
+                        { text: '语义化容器元素', link: '/note/html/semanticContainer' },
+                        { text: '元素包含关系', link: '/note/html/inclusiveRelationship' },
                     ]
                 },
                 {
