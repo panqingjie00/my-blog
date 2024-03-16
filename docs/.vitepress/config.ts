@@ -459,6 +459,11 @@ export default defineConfig({
                         { text: '图片元素', link: '/note/html/img' },
                         { text: '语义化容器元素', link: '/note/html/semanticContainer' },
                         { text: '元素包含关系', link: '/note/html/inclusiveRelationship' },
+                        { text: 'iframe元素', link: '/note/html/iframe' },
+                        { text: 'flash', link: '/note/html/flash' },
+                        { text: '表单元素', link: '/note/html/formElements' },
+                        { text: '美化表单元素', link: '/note/html/beautifyFormElements' },
+                        { text: '表格元素', link: '/note/html/table' },
                     ]
                 },
                 {
