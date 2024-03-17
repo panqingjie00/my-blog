@@ -495,6 +495,13 @@ export default defineConfig({
                     ]
                 },
                 {
+                    text: '计算机网络',
+                    collapsed: false,
+                    items: [
+                        { text: 'url 和 http', link: '/note/computerNetwork/urlAndHttp' },
+                    ]
+                },
+                {
                     text: 'Node',
                     collapsed: false,
                     items: [
