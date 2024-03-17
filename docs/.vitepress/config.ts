@@ -499,6 +499,7 @@ export default defineConfig({
                     collapsed: false,
                     items: [
                         { text: 'url 和 http', link: '/note/computerNetwork/urlAndHttp' },
+                        { text: '浏览器页面处理流程', link: '/note/computerNetwork/pageRenderSteps' },
                     ]
                 },
                 {
