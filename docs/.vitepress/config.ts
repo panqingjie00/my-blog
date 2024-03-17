@@ -500,6 +500,8 @@ export default defineConfig({
                     items: [
                         { text: 'url 和 http', link: '/note/computerNetwork/urlAndHttp' },
                         { text: '浏览器页面处理流程', link: '/note/computerNetwork/pageRenderSteps' },
+                        { text: 'AJAX', link: '/note/computerNetwork/ajax' },
+                        { text: 'OSI五层网络模型', link: '/note/computerNetwork/OSI' },
                     ]
                 },
                 {
